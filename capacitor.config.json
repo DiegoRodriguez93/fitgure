@@ -1,0 +1,8 @@
+{
+  "appId": "com.fitgure",
+  "appName": "Fitgure",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

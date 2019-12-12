@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fitgure</title>
+    <base href="/" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <link rel="stylesheet" href="css/index.css">
+
+
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Ionic App" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  </head>
+  <body style="height: 100%!important;">
+<!-- SLIDER START -->
+        <ion-slides id="ion-slides" style="height: 100%!important;margin: 0;"  pager="true">
+
+            <ion-slide>
+                <h1>Slide 1</h1>
+              </ion-slide>
+          
+              <ion-slide>
+                <h1>Slide 2</h1>
+              </ion-slide>
+          
+              <ion-slide>
+                      <h1>Slide 3</h1>
+              </ion-slide>
+
+              <ion-slide  id="bg" style="background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=494&q=80');" >
+                <ion-grid>
+                    <ion-row >
+                      <ion-col class="">
+                        <img src="img/logo.png"  alt="">
+                  </ion-col>
+                </ion-row>
+                <ion-row style="margin-top:42%;margin-bottom: 25%;">
+                    <ion-col class="ion-text-center">
+                      <h2 style="color:white">Comienza a entrenar</h2>
+                     <button  expand="full" onclick="startSession()" class="button">INICIAR SESIÓN</button>
+                     <button  expand="full" onclick="joinNow()" style="margin-top:12px;margin-bottom: 40px;" class="button2">ÚNETE AHORA</button>
+                </ion-col>
+              </ion-row>
+              </ion-grid>
+            </ion-slide>
+
+            </ion-slides>
+
+            <ion-grid id="ion-login">
+                <ion-row>
+                  <ion-col>
+                    <div class="ion-text-center" style="margin-top:50px">
+                    <img src="img/logo2.png"  height="40px" width="160px" alt="">
+                  </div>
+                    <h3 class="ion-text-center" style="color: #015c7a;margin-top: 50px;"><b>INICIAR SESIÓN</b></h3>
+                    <div class="ion-text-center" style="margin-top: 40px;">
+                      <input type="text" style="width: 80%;height: 35px;" placeholder="Dirección de correo electrónico" />
+                      <input type="text" style="width: 80%;height: 35px; margin-top: 15px;" placeholder="Contraseña" />
+                    </div>
+                    <h5 class="ion-text-right" style="margin-right: 10%;color:grey">¿Has olvidado tu contraseña?</h5>
+                    <div class="ion-text-center">
+                      <button  expand="full"  class="button3">SIGUIENTE</button>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+    <!-- SLIDER END -->
+    
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/functions.js"></script>
+  </body>
+
+</html>

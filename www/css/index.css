@@ -1,0 +1,53 @@
+#bg {  top: 0; left: 0;background-position: center;background-repeat: no-repeat!important;}
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+.button {
+    background-color: rgba(0, 140, 186, 0.69); /* blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    width: 90%;
+  }
+
+  .button2 {
+    background-color: rgba(0, 140, 206, 0.59); /* blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    width: 90%;
+  }
+
+  .button3 {
+    background-color: rgba(0, 0, 0, 0.89); /* black */
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    width: 80%;
+    margin-top: 10%;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    padding-left: 15px;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    padding-left: 15px;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    padding-left: 15px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    padding-left: 15px;
+  }
