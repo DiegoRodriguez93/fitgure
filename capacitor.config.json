@@ -1,6 +1,6 @@
 {
-  "appId": "com.fitgure",
-  "appName": "Fitgure",
+  "appId": "com.fitgure.trainers",
+  "appName": "FitGure Trainers",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

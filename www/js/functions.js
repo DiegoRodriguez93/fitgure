@@ -6,3 +6,11 @@ function startSession(){
     $('#ion-login').show();
 
 }
+
+function joinNow(){
+
+    $('#ion-slides').hide();
+
+    $('#ion-register').show();
+
+}

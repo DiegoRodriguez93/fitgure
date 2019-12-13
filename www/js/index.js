@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-    $('#ion-slides').show();
     $('#ion-login').hide();
-
+    $('#ion-register').hide();
+    
+    $('#ion-slides').show();
+    
 });
