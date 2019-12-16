@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-     $('#ion-slides').hide();
+    /*  $('#ion-slides').hide(); */
 
     $('#ion-login').hide();
 
@@ -14,9 +14,9 @@ $(document).ready(function(){
     $('#ion-step-4').hide();
     
     $('#ion-index-descubre').hide();
-    $('#ion-profile').show();
-    
-    
+    $('#ion-profile').hide();
+
+    /* location.replace('perfil.html'); */
 
     
 });

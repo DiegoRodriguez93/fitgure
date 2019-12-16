@@ -146,3 +146,18 @@
 
 
   }
+
+  hr { 
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0em 1em 0em 1em; 
+    padding: 0; 
+  
+  }
+
+  .perfil-datos-h6{
+    font-family: 'centuryg';
+    color: rgb(102, 99, 99);
+  }

@@ -51,6 +51,7 @@ function stepFour($param){
 
     localStorage.setItem('stepfour',$param);
     $('#ion-step-4').hide();
-     $('#ion-index-descubre').show(); 
+    
+    location.replace('app.html');
 
 }
