@@ -6,20 +6,19 @@
     <base href="/" />
     <meta
       name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content=" width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-    <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="./css/index.css">
 
     <!-- add to homescreen for ios -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Ionic App" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   </head>
-  <body style="height: 100%!important;">
+  <body>
 <!-- SLIDER START -->
         <ion-slides id="ion-slides" style="height: 100%!important;margin: 0;"  pager="true">
 
@@ -35,7 +34,7 @@
                       <h1>Slide 3</h1>
               </ion-slide>
 
-              <ion-slide  id="bg" style="background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=494&q=80');" >
+              <ion-slide  id="bg" style="background-image: url('img/back1.jpg');" >
                 <ion-grid>
                     <ion-row >
                       <ion-col class="">
@@ -111,20 +110,247 @@
                   </div>
                 </div>
                 <div class="ion-text-center" style="margin-top: 15%;">
-                  <button  expand="full"  class="button5"> 
+                  <button  expand="full" onclick="startRegister()"  class="button5"> 
                     <img src="img/envelope.png" class="img_button" height="40" width="40" alt=""/>    Registrarte con correo<br>    electrónico</button>
                 </div>
           </ion-col>
         </ion-row>
       </ion-grid>
 <!-- REGISTER PAGE1 END -->
+
+
+    <!-- REGISTER PAGE1 START -->
+    <ion-grid id="ion-register-1">
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center" style="margin-top:50px">
+          <img src="img/logo2.png"  height="40px" width="160px" alt="">
+        </div>
+          <h4 style="color: #015c7a;margin-top: 50px;margin-left: 45px;"><b>INFORMACIÓN PERSONAL</b></h4>
+          <p style="color: #3a3b3b;margin-top: 10px;margin-left: 65px;font-size: 0.85em;">
+            <b>Por favor ingresa un correo electrónico válido</b></p>
+
+          <div class="ion-text-center" style="margin-top: 40px;">
+
+            <input type="text" class="input-register" placeholder="Nombre" name="" id="">
+            <input type="text" class="input-register" placeholder="Correo electrónico" name="" id="">
+            <input type="text" class="input-register" placeholder="Crea una contraseña" name="" id="">
+
+          </div>
+              <div class="ion-text-center" style="margin-top: 15%;">
+                <button  expand="full" onclick="goToStepOne()" class="button3"><h7 style="color: #d9dbdb;">Registrarse</h7></button>
+              </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+<!-- REGISTER PAGE1 END -->
+
+
+    <!-- REGISTER STEP1 START -->
+    <ion-grid id="ion-step-1">
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center" style="margin-top:40px">
+            <h4 style="color: #015c7a;"><b>Paso 1 de 4</b></h4>
+        </div>
+        <div class="ion-text-center" style="margin-top:40px">
+          <h4 style="color: #015c7a;"><b>¿Cuál es tu sexo?</b></h4>
+          <img src="img/icon01.png" class="image-step" alt="">
+      </div>
+
+          <div class="ion-text-center" style="margin-top: 40px;">
+            <button onclick="stepOne('hombre')" class="button-step">Hombre</button>
+            <button onclick="stepOne('mujer')" class="button-step">Mujer</button>
+            <button onclick="stepOne('omitir')" class="button-step">Omitir</button>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+<!-- REGISTER STEP1 END -->
+
+    <!-- REGISTER STEP2 START -->
+    <ion-content id="ion-step-2">
+      <ion-row>
+        <ion-col>
+
+            <ion-infinite-scroll>
+             
+          <div class="ion-text-center" style="margin-top:5%">
+            <h4 style="color: #015c7a;"><b>Paso 2 de 4</b></h4>
+        </div>
+        <div class="ion-text-center" style="margin-top:5% ">
+          <h4 style="color: #015c7a;"><b>¿Cuál es tu sexo?</b></h4>
+          <img src="img/icon02.png" class="image-step" alt="">
+      </div>
+
+          <div class="ion-text-center" style="margin-top: 5%;">
+            <button onclick="stepTwo('perdida de peso')" class="button-step">Perdida de peso</button>
+            <button onclick="stepTwo('tonificar y reforzar')" class="button-step">Tonificar y reforzar</button>
+            <button onclick="stepTwo('Fortalezer y quemar')" class="button-step">Fortalezer y quemar</button>
+            <button onclick="stepTwo('Athletic Performance')" class="button-step">Athletic Performance</button>
+            <button onclick="stepTwo('Moldear gluteos')" class="button-step">Moldear gluteos</button>
+            <button onclick="stepTwo('omitir')" class="button-step">Omitir</button>
+            <div style="margin-top: 100px;"></div>
+          </div>
+
+        </ion-col>
+      </ion-row>
+
+
+  </ion-infinite-scroll>
+
+    </ion-content>
+<!-- REGISTER STEP2 END -->
+
+    <!-- REGISTER STEP3 START -->
+    <ion-grid id="ion-step-3">
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-center" style="margin-top:40px">
+              <h4 style="color: #015c7a;"><b>Paso 3 de 4</b></h4>
+          </div>
+          <div class="ion-text-center" style="margin-top:40px">
+            <h4 style="color: #015c7a;"><b>¿Dónde prefieres ejercitar?</b></h4>
+            <img src="img/icon03.png" class="image-step" alt="">
+        </div>
+  
+            <div class="ion-text-center" style="margin-top: 40px;">
+              <button onclick="stepThree('gimasio')" class="button-step">Gimnasio</button>
+              <button onclick="stepThree('En casa o exteriores')" class="button-step">En casa o exteriores</button>
+              <button onclick="stepThree('omitir')" class="button-step">Omitir</button>
+            </div>
+  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  <!-- REGISTER STEP3 END -->
+
+      <!-- REGISTER STEP4 START -->
+      <ion-grid id="ion-step-4">
+          <ion-row>
+            <ion-col>
+              <div class="ion-text-center" style="margin-top:40px">
+                <h4 style="color: #015c7a;"><b>Paso 4 de 4</b></h4>
+            </div>
+            <div class="ion-text-center" style="margin-top:40px">
+              <h4 style="color: #015c7a;"><b>¿Cuál es tu nivel de actividad?</b></h4>
+              <img src="img/icon04.png" class="image-step" alt="">
+          </div>
+    
+              <div class="ion-text-center" style="margin-top: 40px;">
+                <button onclick="stepFour('0-1')" class="button-step">0-1 Estoy oxidado</button>
+                <button onclick="stepFour('2-4')" class="button-step">2-4 Estoy acostumbrado</button>
+                <button onclick="stepFour('5+')" class="button-step">5+ Listo para todo</button>
+                <button onclick="stepFour('omitir')" class="button-step">Omitir</button>
+              </div>
+    
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    <!-- REGISTER STEP4 END -->
+
+          <!-- INDEX START -->
+          <ion-content id="ion-index-descubre">
+
+            <ion-row style="background-color: #121213; height: 30%;">
+              <ion-col >
+                <div class="ion-text-center" style="margin-top:20px">
+                  <img src="img/logo3.png"  height="50px" width="160px" alt="">
+                </div>
+              </ion-col>
+            </ion-row>
+
+
+            <div class="bottom-nav">
+
+              <ion-row>
+                <ion-col class="delete-margins">
+                  <div class="active-bottom-nav active"></div>
+                </ion-col>
+                <ion-col class="delete-margins">
+                  <div class="active-bottom-nav "></div>
+                </ion-col>
+                <ion-col class="delete-margins ">
+                  <div class="active-bottom-nav"></div>
+                </ion-col>
+              </ion-row>
+              
+              <ion-row>
+                <ion-col onclick="descubre()" class="ion-text-center delete-margins">
+                  <img src="img/01-active.png" style="height: 36px;margin-top: 8px;" alt=""><br>
+                  Descubre
+                </ion-col>
+                <ion-col onclick="entrena()" class="ion-text-center delete-margins">
+                  <img src="img/02.png" style="height: 36px;margin-top: 8px;" alt=""><br>
+                  Entrena
+                </ion-col>
+                <ion-col onclick="perfil()" class="ion-text-center delete-margins">
+                  <img src="img/03.png" style="height: 36px;margin-top: 8px;" alt=""><br>
+                  Perfil
+                </ion-col>
+              </ion-row>
+
+            </div>
+
+          </ion-content>
+      <!-- INDEX END -->
+    
+                <!-- PROFILE START -->
+                <ion-content id="ion-profile">
+
+                  <ion-row style="background-color: #121213; height: 35%;">
+                    <ion-col >
+                      <div class="ion-text-center" style="margin-top:10px">
+                        <img src="img/logo3.png"  height="50px" width="160px" alt="">
+                      </div>
+                      <div style="margin-left:8%;color:white">
+                        <h2>Perfil</h2>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+      
+      
+                  <div class="bottom-nav">
+      
+                    <ion-row>
+                      <ion-col class="delete-margins">
+                        <div class="active-bottom-nav "></div>
+                      </ion-col>
+                      <ion-col class="delete-margins">
+                        <div class="active-bottom-nav "></div>
+                      </ion-col>
+                      <ion-col class="delete-margins ">
+                        <div class="active-bottom-nav active"></div>
+                      </ion-col>
+                    </ion-row>
+                    
+                    <ion-row>
+                      <ion-col onclick="descubre()" class="ion-text-center delete-margins">
+                        <img src="img/01.png" style="height: 36px;margin-top: 8px;" alt=""><br>
+                        Descubre
+                      </ion-col>
+                      <ion-col onclick="entrena()" class="ion-text-center delete-margins">
+                        <img src="img/02.png" style="height: 36px;margin-top: 8px;" alt=""><br>
+                        Entrena
+                      </ion-col>
+                      <ion-col onclick="perfil()" class="ion-text-center delete-margins">
+                        <img src="img/03-active.png" style="height: 36px;margin-top: 8px;" alt=""><br>
+                        Perfil
+                      </ion-col>
+                    </ion-row>
+      
+                  </div>
+      
+                </ion-content>
+            <!-- PROFILE END -->
     
 
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/background.js"></script>
+<!--   <script src="js/background.js"></script> -->
   <script src="js/slider.js"></script>
   <script src="js/functions.js"></script>
   </body>

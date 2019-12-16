@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'centuryg';
+  src: url('./fonts/gothic.eot');
+  src: url('./fonts/gothic.woff') format('woff'),
+  url('fonts/centurygothicregular.ttf') format('truetype');
+} 
+
 #bg {  top: 0; left: 0;background-position: center;background-repeat: no-repeat!important;}
 .bgwidth { width: 100%; }
 .bgheight { height: 100%; }
@@ -37,6 +44,7 @@
     font-size: 19px;
     width: 80%;
     margin-top: 10%;
+    font-family: 'centuryg';
   }
 
   .button4 {
@@ -47,6 +55,7 @@
     padding: 5px;
     height: 70px;
     width: 80%;
+    font-family: 'centuryg';
   }
 
   .button5 {
@@ -75,4 +84,65 @@
   }
   :-moz-placeholder { /* Firefox 18- */
     padding-left: 15px;
+  }
+
+  .input-register{
+    width: 80%;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-color: #5c5e5e;
+    border-bottom-width: 1px;
+    margin-top: 29px;
+    font-family: 'centuryg';
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 4px;
+  }
+
+  .button-step {
+    background-color: white;
+    color: rgb(88, 88, 88);
+    border: 1.4px solid #727474;
+    padding: 22px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 75%;
+    font-family: 'centuryg';
+    margin-top: 3%;
+  }
+
+  .image-step{
+    margin-top: 3%;
+    height: 5%;
+    width: 25%;
+  }
+  .active-bottom-nav{
+    background-color: #dbdbdb;
+    width: 100%;
+    height: 5px;
+  }
+  .active{
+    background-color: #75c2cd!important;
+  }
+  .delete-margins{
+    padding: 0 0 0 0;margin: 0 0 0 0;
+  }
+
+  .bottom-nav{
+    font-weight: 500;
+    color: #454747;
+    font-size: 1.1em;
+    font-family: 'centuryg';
+    bottom: 0;
+    position: fixed;
+    height: 81px;
+    background-color:#121213;
+    width: 100%;
+
+
   }
