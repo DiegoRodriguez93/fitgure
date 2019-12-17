@@ -161,3 +161,9 @@
     font-family: 'centuryg';
     color: rgb(102, 99, 99);
   }
+
+  #entrena-scroll{
+    background-image: url("../img/bg.jpg");
+    background-attachment: fixed!important;
+    background-size: cover;
+  }

@@ -12,6 +12,8 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/circle.css?ver=0.2">
+
 
     <!-- add to homescreen for ios -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,17 +36,32 @@
               </div>
               <!-- DESCUBRE END -->
                <!-- ENTRENA START -->
-              <div id="entrena-content">
-                <ion-row style="background-color: #121213; height: 35%;">
+              <div id="entrena-content" style="background-color: #121213;">
+                <ion-row>
                   <ion-col >
-                    <div class="ion-text-center" style="margin-top:10px">
+                    <div class="ion-text-center" style="    position: fixed;
+                    left: 38%;
+                    top: 5%;
+                    transform: translate(-5%, -38%);">
                       <img src="img/logo3.png"  height="50px" width="160px" alt="">
-                    </div>
-                    <div style="margin-left:8%;color:white">
-                      <h2>Entrena</h2>
                     </div>
                   </ion-col>
                 </ion-row>
+                
+                <ion-infinite-scroll id="entrena-scroll">
+
+                  <ion-row>
+                    <ion-col>
+                      <div style="margin-left:8%;color:white;margin-top: 20%;">
+                        <h2>Tus entrenamientos</h2>
+                      </div>
+                      <div style="margin-bottom: 980px;"></div>
+                    </ion-col>
+                  </ion-row>
+
+                  
+
+                </ion-infinite-scroll>
               </div>
               <!-- ENTRENA END -->
 
@@ -63,16 +80,69 @@
 
                 <ion-infinite-scroll>
 
-                <ion-row class="ion-text-center" style="background-color: #121213; height: 35%;">
+                <ion-row class="ion-text-center" style="background-color: #121213; height: 35%;padding-bottom: 5px;
+                 margin-left: auto;margin-right: auto;">
                   <ion-col>
-                      <H1>1</H1>
+                    <div class="c100 p0 darkblue center">
+                      
+                        <span>0</span>
+                      
+                        <div class="slice">
+                      
+                          <div class="bar"></div>
+                      
+                          <div class="fill"></div>
+                      
+                        </div>
+
+                      </div>
+
+
                   </ion-col>
+
                   <ion-col >
-                    <H1>2</H1>
+                    <div class="c100 p75 darkblue center">
+                      
+                      <span>3</span>
+                    
+                      <div class="slice">
+                    
+                        <div class="bar"></div>
+                    
+                        <div class="fill"></div>
+                    
+                      </div>
+                    
+                    </div>
                   </ion-col>
                   <ion-col>
-                    <H1>3</H1>
+                    <div class="c100 p100 darkblue center">
+                      
+                      <span>4</span>
+                    
+                      <div class="slice">
+                    
+                        <div class="bar"></div>
+                    
+                        <div class="fill"></div>
+                    
+                      </div>
+                    
+                    </div>
+
                   </ion-col>
+                </ion-row>
+
+                <ion-row class="ion-text-center" style="background-color: #121213; height: 35%;padding-bottom: 20px;">
+                <ion-col style="color:white;font-weight:500">
+                  OBJETIVO<BR>
+                    SEMANAL
+                </ion-col>
+                <ion-col style="color:white;font-weight:500;padding-top: 15px;">ENTRENAMIENTOS</ion-col>
+                <ion-col style="color:white;font-weight:500">
+                  RUTINAS<BR>
+                    COMPLETADAS
+                </ion-col>
                 </ion-row>
 
                 <ion-row>
@@ -127,7 +197,7 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script> -->
 <script src="js/router.js"></script>
 <script src="js/nav.js"></script>
 <script>
@@ -137,7 +207,35 @@
       $('.bottom-nav').html(bottomnav);
 
       descubre(); // cargamos descubre
-  
+
+
+
+
+/* 
+      $('.circle').circleProgress({
+      value: 1.0,
+      size: 80,
+      fill: {
+        color: "#2cb6c9"
+      },reverse: true
+      });
+
+      $('#circle2').circleProgress({
+        value: 0.75,
+      size: 80,
+      fill: {
+        color: "#2cb6c9"
+      },reverse: true
+      });
+
+      $('#circle3').circleProgress({
+      value: 0.50,
+      size: 80,
+      fill: {
+        color: "#2cb6c9"
+      },reverse: true
+      }); */
+      
   
     });
   
