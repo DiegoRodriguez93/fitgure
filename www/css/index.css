@@ -5,6 +5,11 @@
   url('fonts/centurygothicregular.ttf') format('truetype');
 } 
 
+@font-face {
+  font-family: 'norwester';
+  src: url('fonts/norwester.otf') format('opentype');
+} 
+
 #bg {  top: 0; left: 0;background-position: center;background-repeat: no-repeat!important;}
 .bgwidth { width: 100%; }
 .bgheight { height: 100%; }
