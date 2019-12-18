@@ -3,6 +3,7 @@ function descubre(){
     $('#descubreTop').addClass('active');
     $('#descubreImg').attr('src','img/01-active.png');
     $('#descubre-content').show();
+    $('#descubre-content').focus();
 
     $('#entrenaTop').removeClass('active');
     $('#entrenaImg').attr('src','img/02.png');
@@ -47,6 +48,7 @@ function perfil(){
     $('#perfilTop').addClass('active');
     $('#perfilImg').attr('src','img/03-active.png');
     $('#perfil-content').show();
+    $('#perfil-content').focus();
 
 
 }

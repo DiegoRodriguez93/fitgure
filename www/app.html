@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="css/circle.css?ver=0.2">
+    <link rel="stylesheet" href="css/dark.min.css">
 
 
     <!-- add to homescreen for ios -->
@@ -24,6 +25,7 @@
 
               <!-- INDEX START -->
               <ion-content>
+                
                 <!-- DESCUBRE START -->
                 <div id="descubre-content">
                  <ion-row style="background-color: #121213; height: 30%;">
@@ -38,23 +40,41 @@
                <!-- ENTRENA START -->
               <div id="entrena-content" style="background-color: #121213;">
                 <ion-row>
-                  <ion-col >
-                    <div class="ion-text-center" style="    position: fixed;
-                    left: 38%;
-                    top: 5%;
-                    transform: translate(-5%, -38%);">
+                  <ion-col class="delete-margins" >
+                    <div class="ion-text-center delete-margins" style="    position: fixed;
+                    z-index: 9999;
+                    background-color: #121213;
+                    width: 100%;">
                       <img src="img/logo3.png"  height="50px" width="160px" alt="">
                     </div>
                   </ion-col>
                 </ion-row>
                 
                 <ion-infinite-scroll id="entrena-scroll">
-
+                  <div id="entrena-top"></div>
                   <ion-row>
                     <ion-col>
                       <div style="margin-left:8%;color:white;margin-top: 20%;">
                         <h2>Tus entrenamientos</h2>
                       </div>
+                      <div class="ion-text-center">
+                      <video style="width: 80%;height: 332px;" controls poster="/img/video_preview.png">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                        Your browser does not support HTML5 video.
+                      </video>
+                    </div>
+
+                      <div class="delete-margins" style="width: 80%;
+                      height: 156px;
+                      box-shadow: 0px 5px 15px 5px #2B2B2B;
+                      margin-left: auto;
+                      margin-right: auto;
+                      ">
+                      <h6><b>NOMBRE DE ENTRENAMIENTO</b></h6>
+                    </div>
+
+                      
                       <div style="margin-bottom: 980px;"></div>
                     </ion-col>
                   </ion-row>
@@ -80,8 +100,7 @@
 
                 <ion-infinite-scroll>
 
-                <ion-row class="ion-text-center" style="background-color: #121213; height: 35%;padding-bottom: 5px;
-                 margin-left: auto;margin-right: auto;">
+                <ion-row  style="background-color: #121213;">
                   <ion-col>
                     <div class="c100 p0 darkblue center">
                       
@@ -158,10 +177,12 @@
 
                     <h3 style="margin-left: 8%">Ajustes</h3>
                     <hr>
-                    <h6 style="margin-left: 10%;" class="perfil-datos-h6" >Configuración</h6>
+                    <h6 style="margin-left: 10%;" class="perfil-datos-h6" >Configuración
+                      <h7 style="float: right;margin-right: 15%;font-weight: bolder;">></h7></h6>
                      <hr>
 
-                     <h6 style="margin-left: 10%;" class="perfil-datos-h6" >Cambiar email            email@email.com</h6>
+                     <h6 style="margin-left: 10%;" class="perfil-datos-h6" >Cambiar email
+                     <h7 style="float: right;margin-right: 10%;">email@email.com</h7></h6>
 
                      <hr style="border-top: 10px solid #ccc;">
 
@@ -174,7 +195,7 @@
 
                     <h3 style="margin-left: 8%">Mis cuenta</h3>
                     <hr>
-                    <h6 style="margin-left: 10%;" class="perfil-datos-h6" >Cerrar sesión</h6>
+                    <h6 style="margin-left: 10%;" onclick="closeSession()" class="perfil-datos-h6" >Cerrar sesión</h6>
                   </ion-col>
                 </ion-row>
 
@@ -197,44 +218,39 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script> -->
+<script src="js/sweetalert2.min.js"></script>
 <script src="js/router.js"></script>
 <script src="js/nav.js"></script>
 <script>
+  function closeSession(){
+    Swal.fire({
+  title: '¿Estas seguro que deseas cerrar sesión?',
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Si, cerrar sesión!',
+  cancelButtonText: 'No, cancelar!',
+  reverseButtons: false
+}).then((result) => {
+  if (result.value) {
+  
+    location.replace('index.html');
+
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+
+    console.log('cancel cerrar sesión');
+
+  }
+})
+  }
     
     $(document).ready(function(){
         
       $('.bottom-nav').html(bottomnav);
 
       descubre(); // cargamos descubre
-
-
-
-
-/* 
-      $('.circle').circleProgress({
-      value: 1.0,
-      size: 80,
-      fill: {
-        color: "#2cb6c9"
-      },reverse: true
-      });
-
-      $('#circle2').circleProgress({
-        value: 0.75,
-      size: 80,
-      fill: {
-        color: "#2cb6c9"
-      },reverse: true
-      });
-
-      $('#circle3').circleProgress({
-      value: 0.50,
-      size: 80,
-      fill: {
-        color: "#2cb6c9"
-      },reverse: true
-      }); */
       
   
     });
