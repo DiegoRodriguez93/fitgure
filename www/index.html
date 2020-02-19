@@ -12,6 +12,7 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/dark.min.css">
 
     <!-- add to homescreen for ios -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -62,12 +63,12 @@
                   </div>
                     <h4 class="ion-text-center" style="color: #015c7a;margin-top: 50px;"><b>INICIAR SESIÓN</b></h4>
                     <div class="ion-text-center" style="margin-top: 40px;">
-                      <input type="text" style="width: 80%;height: 35px;" placeholder="Dirección de correo electrónico" />
-                      <input type="text" style="width: 80%;height: 35px; margin-top: 15px;" placeholder="Contraseña" />
+                      <input type="text" style="width: 80%;height: 35px;" id="userMail" placeholder="Dirección de correo electrónico" />
+                      <input type="password" style="width: 80%;height: 35px; margin-top: 15px;" id="password" placeholder="Contraseña" />
                     </div>
                     <h6 class="ion-text-right" style="margin-right: 10%;color:grey">¿Has olvidado tu contraseña?</h6>
                     <div class="ion-text-center">
-                      <button  expand="full"  class="button3">Siguiente</button>
+                      <button  expand="full" onclick="LogIn()"  class="button3">Siguiente</button>
 
                     </div>
                     <div class="ion-text-center">
@@ -256,6 +257,7 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/sweetalert2.min.js"></script>
  
   <script src="js/index.js"></script>
 <!--   <script src="js/background.js"></script> -->

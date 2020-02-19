@@ -55,3 +55,45 @@ function stepFour($param){
     location.replace('app.html');
 
 }
+
+function LogIn(){
+
+    $userMail = $('#userMail').val();
+    $password = $('#password').val();
+
+    $.ajax({
+        type: "POST",
+        url: "http://api.fitgure.com/api/User/GetUser?userMail="+$userMail+"&password="+$password,
+        dataType: "JSON",
+        success: function (res) {
+            if(res.bState){
+          
+            Swal.fire(
+            'Ok!',
+            'Credenciales correcta!',
+            'success'
+            );
+
+                setTimeout(function(){
+                    $('#ion-login').hide();
+                    location.replace('app.html');
+                },3000);
+
+            }else{
+                Swal.fire(
+                    'Error!',
+                    'La información suministrada no es válida, por favor verifica.',
+                    'error'
+                    );
+            }
+        },error(res){
+            Swal.fire(
+                'Error!',
+                'La información suministrada no es válida, por favor verifica.',
+                'error'
+                );
+        }
+    });
+
+
+}
